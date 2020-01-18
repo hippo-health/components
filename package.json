@@ -1,6 +1,6 @@
 {
   "name": "@hippo-health/components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Shared React components for hippo applications",
   "homepage": "https://github.com/hippo-health/components#readme",
   "license": "MIT",
