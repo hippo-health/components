@@ -15,17 +15,37 @@
     "url": "git://github.com/hippo-health/components.git"
   },
   "dependencies": {
+    "@types/jest": "^25.1.0",
+    "@types/node": "^13.5.0",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
     "jest": "^24.9.0",
     "react": "^16.12.0",
-    "storybook": "^5.3.6",
+    "storybook": "^5.3.9",
+    "tailwindcss": "^1.1.4",
     "typescript": "^3.7.5"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@storybook/addon-actions": "^5.3.9",
+    "@storybook/addon-links": "^5.3.9",
+    "@storybook/addons": "^5.3.9",
+    "@storybook/preset-typescript": "^1.2.0",
+    "@storybook/react": "^5.3.9",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "fork-ts-checker-webpack-plugin": "^4.0.3",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "ts-loader": "^6.2.1"
+  },
   "scripts": {
     "preinstall": "[[ -e ./setup.sh ]] && ./setup.sh || true",
     "postinstall": "rm -f .npmrc",
     "build": "rm -rf lib/* && tsc",
-    "patch:publish": "yarn build && npm version patch && npm publish"
+    "patch:publish": "yarn build && npm version patch && npm publish",
+    "storybook": "start-storybook -c .storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "build:styles": "npx tailwind build src/index.css -o src/styles.css"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
